@@ -10,37 +10,21 @@ html, body{
     background-color: #E494AE;
 }
 
-.fon1{
-    width: 100%;
-    margin-top: -10%;
-    z-index: 0;
-    position: relative;
+.section1{
+   width: 100%;
+   height: 65vw;
+   line-height: 0;
 }
 
-.FON1{
-    width: 100vw;
-    height: 60vw;
-    overflow-y: hidden;
-    position: relative;
+.FON{
+    width: 100%; 
+    height: 65vw;
+    overflow: hidden;
 }
 
-.zanaves1{
-    z-index: 1;
-    height: 55vw;
-    width: 50vw;
-    position: absolute;
-
-}
-.zanaves2{
-    z-index: 1;
-    height: 55vw;
-    width: 50vw;
-  position: absolute;
-}
-
-.ZANAVES{
-    width: 100vw;
-    height: 55vw;
-    position: absolute;
-    margin-top: -70%;
+.fon_img{
+    width: 100%;      
+    height: 100%;    
+    display: block;   
+    object-fit: cover;
 }
