@@ -1,0 +1,168 @@
+@keyframes pulse_letter {
+   0% { transform: var(--rot) scale(1) rotate(0deg);}
+   30% { transform: var(--rot) scale(1.4) rotate(10deg);}
+   70% { transform: var(--rot) scale(1.3) rotate(-10deg);}
+   100% { transform: var(--rot) scale(1) rotate(0deg);}
+}
+
+
+@keyframes birka_swing {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    33% {
+        transform: rotateX(5deg) rotateY(-8deg) rotateZ(4deg);
+    }
+    66% {
+        transform: rotateX(-4deg) rotateY(6deg) rotateZ(-4deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@keyframes shtorka_swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes fly_butt1 {
+
+    0%, 100% {
+        transform: translate(14vw, 4vw) rotate(0deg);
+    }
+
+    15% {
+        transform: translate(18vw, 5vw) rotate(25deg);
+    }
+
+    50% {
+        transform: translate(14vw, 8vw) rotate(0deg);
+    }
+
+    65% {
+        transform: translate(12vw, 7vw) rotate(-25deg);
+    }
+
+    85% {
+        transform: translate(16vw, 5vw) rotate(10deg);
+    }
+}
+
+
+@keyframes fly_butt2 {
+    0%, 100% {
+        transform: translate(30vw, 4vw) rotate(0deg);
+    }
+
+    /* 15% - Рывок влево (уменьшаем X) и наклон против часовой стрелки */
+    15% {
+        transform: translate(26vw, 5vw) rotate(-25deg);
+    }
+
+    /* 50% - Возврат в центральную линию траектории, выравнивание */
+    50% {
+        transform: translate(30vw, 8vw) rotate(0deg);
+    }
+
+    /* 65% - Рывок вправо и наклон по часовой стрелке */
+    65% {
+        transform: translate(32vw, 7vw) rotate(25deg);
+    }
+
+    /* 85% - Небольшое смещение влево */
+    85% {
+        transform: translate(28vw, 5vw) rotate(-10deg);
+    }
+}
+
+
+@keyframes fly_butt3 {
+     0%, 100% {
+        transform: translate(14vw, 4vw) rotate(0deg);
+    }
+
+    15% {
+        transform: translate(18vw, 5vw) rotate(-25deg);
+    }
+
+    50% {
+        transform: translate(14vw, 8vw) rotate(0deg);
+    }
+
+    65% {
+        transform: translate(12vw, 7vw) rotate(25deg);
+    }
+}
+
+@keyframes swing_tsvetok3 {
+    0% {
+        transform: rotate(-4deg); 
+    }
+    50% {
+        transform: rotate(-8deg); 
+    }
+    100% {
+        transform: rotate(-4deg); 
+    }
+}
+
+@keyframes swing_tsvetok1 {
+    0% {
+        transform: rotate(-5deg); 
+    }
+    50% {
+        transform: rotate(-8deg); 
+    }
+    100% {
+        transform: rotate(-5deg); 
+    }
+}
+
+
+@keyframes hand_move {
+
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg); 
+    }
+
+}
+
+
+.table1 { animation-delay: 0s; }
+.table2 { animation-delay: 1s; }
+.table3 { animation-delay: 1.5s; }
+
+
+@keyframes UpDown_table {
+    0% {
+        
+        transform: translateY(100%);
+    }
+    10% {
+       
+        transform: translateY(0);
+    }
+    70% {
+        
+        transform: translateY(0);
+    }
+    90%, 100% {
+        
+        transform: translateY(100%);
+    }
+}

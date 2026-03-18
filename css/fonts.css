@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url("../fonts/helvetica_regular.otf") format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kommuna";
+    src: url("../fonts/Kommuna-Normal.ttf") format("truetype");
+    font-style: normal;
+}

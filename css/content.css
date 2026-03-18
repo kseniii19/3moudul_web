@@ -11,15 +11,19 @@ html, body{
 }
 
 .section1{
-   width: 100%;
-   height: 65vw;
-   line-height: 0;
+    width: 100%;
+    height: 65vw;
+    position: relative;
+    overflow: hidden;
 }
 
 .FON{
     width: 100%; 
-    height: 65vw;
-    overflow: hidden;
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1; 
 }
 
 .fon_img{
@@ -28,3 +32,2016 @@ html, body{
     display: block;   
     object-fit: cover;
 }
+
+.letter1{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-15deg);
+    left: 3vw;
+    top: 10vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(15deg);
+     animation-delay: 0s;
+}
+
+.letter2{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-5deg);
+    left: 12vw;
+    top: -1.5vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-5deg);
+     animation-delay: 0.4s;
+}
+
+.letter3{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(15deg);
+    left: 24vw;
+    top: 8vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 1s;
+}
+
+.letter4{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-25deg);
+    left: 36vw;
+    top: 0vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-20deg);
+     animation-delay: 1.2s;
+}
+
+.letter5{
+    position: absolute; 
+    z-index: 3;    
+   font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(0deg);
+    left: 49vw;
+    top: 6vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(0deg);
+     animation-delay: 1.5s;
+}
+
+.letter6{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(15deg);
+    left: 63vw;
+    top: -1vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 0.3s;
+}
+
+.letter7{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-15deg);
+    left: 75vw;
+    top: 10vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-10deg);
+     animation-delay: 1s;
+}
+
+.letter8{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(20deg);
+    left: 89vw;
+    top: 3vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 0.7s;
+
+}
+
+.ZANAVES {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; 
+    pointer-events: none;
+}
+
+.shtora1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37vw;
+}
+
+.shtora_img1 {
+    width: 100%;  
+    height: auto;
+    display: block;
+}
+
+.shtora2 {
+    position: absolute;
+    left: 63vw;
+    top: 0;
+    width: 37vw; 
+}
+
+.shtora_img2 {
+    width: 100%;  
+    height: auto;
+    display: block;
+}
+
+.button_flower{
+    position: absolute;
+    left: 50%; 
+    top: 48vw; 
+    transform: translate(-50%, -50%);
+    width: 50vw; 
+    height: 30vw;
+    z-index: 5;
+}
+
+.main_button{
+    position: absolute; 
+    width: 30vw; 
+    height: auto;
+    z-index: 4;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.main_button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.main_button:active {
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.flower1 { 
+    top: 10vw; 
+    left: 5vw; 
+    position: absolute;
+    transform: rotate(20deg);
+    width: 6vw;
+    height: 7vw;
+}
+
+.flower2 { 
+    top: 4vw;
+    left: 9vw;
+    position: absolute;
+    transform: rotate(30deg);
+    width: 7vw;
+    height: 8vw;
+}
+
+.flower3 {
+     top: 3vw;
+     left: 14vw;
+     position: absolute;
+     width: 5vw;
+     height: 7vw;
+}
+
+.flower4 {
+    top: 3vw;
+    left: 18vw;
+    position: absolute;
+    width: 5vw;
+    height: 7vw;
+}
+
+.flower5 { 
+    top: 6vw; 
+    left: 22vw;
+    position: absolute; 
+    width: 4vw;
+    height: 4vw;
+} 
+
+.flower6 {
+     top: 5vw;
+     left: 26vw;
+     position: absolute;
+     width: 5vw;
+     height: 5vw; 
+}
+
+.flower7 { 
+    top: 5vw; 
+    left: 31vw;
+    position: absolute;
+    width: 4vw;
+    height: 5vw; 
+}
+
+.flower8 { 
+    top: 7vw; 
+    left: 35vw; 
+    position: absolute;
+    width: 3vw;
+    height: 3vw; 
+    transform: rotate(-40deg);
+}
+
+.flower9 { 
+    top: 12vw; 
+    left: 37vw;
+    position: absolute;
+    width: 5vw;
+    height: 7vw;  
+    transform: rotate(30deg);
+}
+
+.flower10 { 
+    top: 6vw; 
+    left: 38.5vw; 
+    position: absolute;
+    width: 6vw;
+    height: 7vw; 
+    transform: rotate(35deg);
+} 
+
+.flower11 {
+     top: 13vw;
+     left: 39.5vw;
+     position: absolute;
+     width: 2vw;
+     height: 2vw; 
+}
+
+.flower12 { 
+    top: 17vw; 
+    left: 42vw; 
+    position: absolute;
+    width: 2vw;
+    height: 2vw; 
+}
+
+.flower13 { 
+    top: 11vw; 
+    left: 33vw; 
+    position: absolute;
+    width: 7vw;
+    height: 9vw; 
+}
+
+.flower14 { 
+    top: 14vw; 
+    left: 31vw;
+    position: absolute; 
+    width: 5vw;
+    height: 7vw; 
+}
+
+.flower15 { 
+    top: 14vw; 
+    left: 28vw; 
+    position: absolute;
+    width: 4vw;
+    height: 7vw; 
+}
+
+.flower16 { 
+    top: 14vw; 
+    left: 25vw;
+    position: absolute; 
+    width: 3vw;
+    height: 3vw;
+}
+
+.flower17 { 
+    top: 14vw; 
+    left: 20vw;
+    position: absolute; 
+    width: 5vw;
+    height: 5vw;
+}
+
+.flower18 { 
+    top: 14vw; 
+    left: 16vw;
+    position: absolute;
+    width: 4vw;
+    height: 6vw;
+}
+
+.flower20 {
+    top: 14.5vw; 
+    left: 11vw; 
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+}
+
+.flower21 { 
+    top: 12vw; 
+    left: 13vw; 
+    transform: rotate(-40deg);
+    position: absolute;
+    width: 6vw;
+    height: 8vw; 
+}
+
+.flower22 { 
+    top: 10vw; left: 
+    10vw; opacity: 0.8; 
+     position: absolute;
+}
+
+.flower23 { 
+    top: 10vw; 
+    left: 40vw; 
+    opacity: 0.8; 
+     position: absolute;
+}
+
+.button_text{
+    font-family: 'Kommuna';
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 9.8vw;
+    left: 17vw;
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+
+
+
+.section2 {
+    position: relative;
+    width: 100%;
+    height: 45vw;
+    perspective: 1000px;
+    overflow: hidden;
+    top: -3vw;
+}
+
+.BIRKI {
+    position: relative;
+    width: 100%;
+    height: 45vw;
+    top: -3vw;
+}
+
+.birka_img {
+   position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    transform-style: preserve-3d;
+    transform-origin: top center; 
+    animation: birka_swing 6s ease-in-out infinite;
+}
+
+.birka_img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.birka_img1 { 
+    width: 17vw; 
+    height: 27vw; 
+    top: -2vw; 
+    left: 0vw; 
+    animation-duration: 6s; 
+    animation-delay: -1s; 
+}
+
+.birka_img2 { 
+    width: 15vw; 
+    height: 40vw; 
+    top: -2vw; 
+    left: 14vw; 
+    animation-duration: 5s; 
+    animation-delay: -3s; 
+}
+
+.birka_img3 { 
+    width: 17vw; 
+    height: 27vw; 
+    top: -2vw; 
+    left: 28vw; 
+    animation-duration: 5.5s; 
+    animation-delay: -5s; 
+}
+
+.birka_img4 { 
+    width: 15vw; 
+    height: 40vw; 
+    top: -0.5vw; 
+    left: 43vw; 
+    animation-duration: 4s; 
+    animation-delay: -0.5s; 
+}
+
+.birka_img5 { 
+    width: 17vw; 
+    height: 27vw; 
+    top: -2vw; 
+    left: 56vw; 
+    animation-duration: 7s; 
+    animation-delay: -2.5s; 
+}
+
+.birka_img6 { 
+    width: 15vw; 
+    height: 40vw; 
+    top: -2vw; 
+    left: 71.5vw; 
+    animation-duration: 6.5s; 
+    animation-delay: -4s; 
+}
+
+.birka_img7 { 
+    width: 17vw; 
+    height: 27vw; 
+    top: -2vw; 
+    left: 83vw; 
+    animation-duration: 4.5s; 
+    animation-delay: -1.5s; 
+}
+
+
+.birka_text1 {
+    position: absolute;
+    z-index: 5;
+    top: 53%; 
+    left: 15%;
+    width: 70%;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9vw;
+    text-align: center;
+    pointer-events: none;       
+    white-space: normal;   
+    word-wrap: break-word; 
+    line-height: 1.1;  
+}
+
+
+.birka_text2 {
+    position: absolute;
+    z-index: 5;
+    top: 76%; 
+    left: 27%;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap; 
+}
+
+.birka_text2_1 {
+    position: absolute;
+    z-index: 5;
+    top: 81%; 
+    left: 10%;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    width: 80%;
+    font-size: 0.9vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+    line-height: 1.1;  
+}
+
+.birka_text3 {
+    position: absolute;
+    z-index: 5;
+    top: 56%; 
+    left: 30%;
+    width: 20%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap; 
+}
+
+.birka_text3_1 {
+    position: absolute;
+    z-index: 5;
+    top: 64%; 
+    left: 10.5%;
+    width: 80%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+    line-height: 1.1;  
+}
+
+
+.birka_text4 {
+    position: absolute;
+    z-index: 5;
+    top: 73%; 
+    left: 3%;
+    width: 95%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal;  
+    word-wrap: break-word; 
+    line-height: 1.1;  
+}
+
+
+.birka_text5 {
+    position: absolute;
+    z-index: 5;
+    top: 60%; 
+    left: 6%;
+    width: 90%;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+
+.birka_text5_1 {
+    position: absolute;
+    z-index: 5;
+    top: 68%; 
+    left: 11.5%;
+    width: 80%;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+    line-height: 1.1;  
+}
+
+.birka_text6 {
+    position: absolute;
+    z-index: 5;
+    top: 73%; 
+    left: 5%;
+    width: 90%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+.birka_text6_1 {
+    position: absolute;
+    z-index: 5;
+    top: 79%; 
+    left: 5%;
+    width: 90%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+    line-height: 1.1; 
+}
+
+
+
+.birka_text7 {
+    position: absolute;
+    z-index: 5;
+    top: 52%; 
+    left: 15%;
+    width: 70%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal ;
+    line-height: 1.1; 
+}
+
+.img_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.birka_img:hover .img_hover {
+    opacity: 1;
+}
+
+.birka_img:hover [class^="birka_text"] {
+    color: #FFFFFF;
+    transition: color 0.5s ease;
+}
+
+
+
+.section3 {
+    width: 100%;
+    height: 78vw; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.FON3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.fon3 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.text_section3{
+    font-size: 4vw;
+    font-family: 'Kommuna';
+    position: absolute;
+    z-index: 3;
+    color: #ffffff;
+    left: 6.9vw;
+    top: 9vw;
+}
+
+.box1{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 18vw;
+    left: 6.9vw;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+
+.box2{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 29vw;
+    left: 6.9vw;
+    -webkit-user-drag: none;
+}
+
+.box3{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 39vw;
+    left: 6.9vw;
+    -webkit-user-drag: none;
+}
+
+.box4{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 49vw;
+    left: 6.9vw;
+    -webkit-user-drag: none;
+}
+
+.box5{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 18vw;
+    left: 16.9vw;
+    -webkit-user-drag: none;
+}
+
+.box6{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 29vw;
+    left: 16.9vw;
+    -webkit-user-drag: none;
+}
+
+.box7{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 39vw;
+    left: 16.9vw;
+    -webkit-user-drag: none;
+}
+
+.box8{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 49vw;
+    left: 16.9vw;
+    -webkit-user-drag: none;
+}
+
+.box9{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 18vw;
+    left: 26.9vw;
+    -webkit-user-drag: none;
+}
+
+.box10{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 29vw;
+    left: 26.9vw;
+    -webkit-user-drag: none;
+}
+
+.box11{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 39vw;
+    left: 26.9vw;
+    -webkit-user-drag: none;
+}
+
+.box12{
+    width: 9vw;
+    height: 9vw;
+    z-index: 4;
+    position: absolute;
+    top: 49vw;
+    left: 26.9vw;
+    -webkit-user-drag: none;
+}
+
+
+.knopka3 {
+    position: absolute;
+    width: 19.6vw; 
+    height: 4.8vw; 
+    z-index: 6;
+    top: 63vw;   
+    left: 16.8vw;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.knopka3_img {
+    position: absolute;
+    width: 100%;   
+    height: 100%;
+    z-index: 1;
+    object-fit: fill; 
+}
+
+.knopka3_text {
+    position: relative;
+    z-index: 2; 
+    top: -0.2vw;      
+    width: 100%;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5vw;   
+    text-align: center;
+    pointer-events: none;
+    margin: 0;
+}
+
+.knopka3:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.knopka3:active {
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+
+.tsvetok1{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    top: 19vw;
+    left: 7.7vw;
+    transition: none;
+}
+
+.tsvetok2{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    top: 30vw;
+    left: 7.7vw;
+    transition: none;
+}
+
+.tsvetok3{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    top: 40vw;
+    left: 7.7vw;
+    transition: none;
+}
+
+.tsvetok4{
+    width: 8vw;
+    height: 8vw;
+    z-index: 7;
+    position: absolute;
+    top: 49.2vw;
+    left: 7.7vw;
+    transition: none;
+}
+
+.listva1{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    left: 17.5vw;
+    top: 19vw;
+    transition: none;
+}
+
+.listva2{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    left: 17.5vw;
+    top: 30vw;
+    transition: none;
+}
+
+.listva3{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    left: 17.5vw;
+    top: 40vw;
+    transition: none;
+}
+
+.listva4{
+    width: 9vw;
+    height: 8vw;
+    z-index: 7;
+    position: absolute;
+    left: 17vw;
+    top: 49.6vw;
+    transition: none;
+}
+
+.ukrash1{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    left: 27.7vw;
+    top: 19vw;
+    transition: none;
+}
+
+.ukrash2{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    left: 27.7vw;
+    top: 30.5vw;
+    transition: none;
+}
+
+.ukrash3{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    left: 27.7vw;
+    top: 40vw;
+    transition: none;
+}
+
+.ukrash4{
+    width: 7.5vw;
+    height: 7vw;
+    z-index: 7;
+    position: absolute;
+    left: 27.7vw;
+    top: 50vw;
+    -webkit-user-drag: none;
+    transition: none;
+}
+
+.primeroch{
+    width: 30vw;
+    height: 52vw;
+    position: absolute;
+    z-index: 5;
+    top: 11vw;
+    left: 63vw;
+    -webkit-user-drag: none;
+}
+
+.shtorka_primeroch{
+    width: 14vw;
+    height: 47vw;
+    position: absolute;
+    z-index: 5;
+    top: 13vw;
+    left: 62vw;
+    animation: shtorka_swing 3s ease-in-out infinite;
+    transform-origin: top center;
+    -webkit-user-drag: none;
+}
+
+.stebel{
+    width: 12vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 5;
+    top: 33vw;
+    left: 73vw;
+    -webkit-user-drag: none;
+}
+
+.zone1{
+    border: 0.3vw dashed blue; 
+    width: 11vw;
+    height: 11vw;
+    position: absolute;
+    z-index: 10; 
+    top: 22vw;
+    left: 76vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2vw;
+    pointer-events: none;
+}
+
+.zone2{
+    border: 0.3vw dashed blue; 
+    width: 5vw;
+    height: 7vw;
+    position: absolute;
+    z-index: 10; 
+    top: 37vw;
+    left: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2vw;
+    pointer-events: none;
+    transform: rotate(-30deg);
+}
+
+
+.zone3{
+    border: 0.3vw dashed blue; 
+    width: 5vw;
+    height: 7vw;
+    position: absolute;
+    z-index: 10; 
+    top: 42vw;
+    left: 78vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2vw;
+    pointer-events: none;
+    transform: rotate(25deg);
+}
+
+.zone4{
+    border: 0.3vw dashed rgb(255, 0, 30); 
+    width: 10vw;
+    height: 8vw;
+    position: absolute;
+    z-index: 10; 
+    top: 30vw;
+    left: 76.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2vw;
+    pointer-events: none;
+}
+
+.section4{
+    width: 100%;
+    height: 120vw;
+    position: relative;
+    z-index: 2;
+}
+
+.butt1{
+    width: 5.8vw;
+    height: 5.8vw;
+    position: absolute;
+    top: -4vw;
+    left: 20vw;
+    z-index: 5;
+    animation: fly_butt1 6s ease-in-out infinite; 
+    transform-origin: center center;
+}
+
+.butt2{
+    width: 10vw;
+    height: 11vw;
+    position: absolute;
+    top: 4vw;
+    left: 27vw;
+    z-index: 5;
+    animation: fly_butt2 6s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+.butt3{
+    width: 6.5vw;
+    height: 6.5vw;
+    position: absolute;
+    top: 14vw;
+    left: 19vw;
+    z-index: 5;
+    animation: fly_butt3 5s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+.birka8 {
+    width: 18vw; 
+    height: auto; 
+    top: -12vw; 
+    left: 38vw; 
+    position: absolute; 
+    transform-origin: top center; 
+    animation: birka_swing 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+.birka8 img {
+    width: 100%;
+    height: auto;
+}
+
+.birka_text8 {
+    position: absolute;
+    z-index: 5;
+    top: 55%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Текст не будет вылезать за края */
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1vw; 
+    text-align: center;
+    pointer-events: none;
+    line-height: 1.1;  
+}
+
+.fairy{
+    width: 20vw;
+    height: 27vw;
+    position: absolute;
+    left: 70vw;
+    top: 14vw;
+    z-index: 5;
+}
+
+.hand{
+    width: 5.6vw;
+    height: 5.7vw;
+    position: absolute;
+    left: 72.5vw;
+    top: 23vw;
+    z-index: 4;
+    animation: hand_move 2s ease-in-out infinite;
+    transform-origin: right center;
+}
+
+.fairy_tsvetok1{
+    width: 40vw;
+    height: 84vw;
+    position: absolute;
+    left: 63vw;
+    top: 29vw;
+    z-index: 6;
+    transform: rotate(-3deg);
+    animation: swing_tsvetok1 5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.fairy_tsvetok2{
+    width: 37vw;
+    height: 76vw;
+    position: absolute;
+    left: 64vw;
+    top: 23vw;
+    z-index: 1;
+}
+
+.fairy_tsvetok3{
+    width: 37vw;
+    height: 44vw;
+    position: absolute;
+    left: 70vw;
+    top: 33vw;
+    transform: rotate(-5deg);
+    animation: swing_tsvetok3 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+
+.text_section4{
+    font-size: 4vw;
+    font-family: 'Kommuna';
+    position: absolute;
+    z-index: 3;
+    color: #ffffff;
+    left: 6.9vw;
+    top: 45vw;
+}
+
+.paletka{
+    width: 55vw;
+    height: 62vw;
+    position: absolute;
+    top: 46vw;
+    left: 6.9vw;
+}
+
+.ten1{
+    width: 11vw;
+    height: 11vw;
+    top: 65vw;
+    left: 14vw;
+    position: absolute;
+}
+
+.ten2{
+    width: 11vw;
+    height: 11vw;
+    top: 65vw;
+    left: 28vw;
+    position: absolute;
+}
+
+.ten3{
+    width: 11vw;
+    height: 11vw;
+    top: 65vw;
+    left: 42vw;
+    position: absolute;
+}
+
+.ten4{
+    width: 11vw;
+    height: 11vw;
+    top: 78vw;
+    left: 14vw;
+    position: absolute;
+}
+
+.ten5{
+    width: 11vw;
+    height: 11vw;
+    top: 78vw;
+    left: 28vw;
+    position: absolute;
+}
+
+.ten6{
+    width: 11vw;
+    height: 11vw;
+    top: 78vw;
+    left: 42vw;
+    position: absolute;
+}
+
+
+.section5{
+    width: 100%;
+    height: 78vw; 
+    position: relative;
+    overflow: hidden;
+} 
+
+
+.text_section5{
+    font-size: 4vw;
+    font-family: 'Kommuna';
+    position: absolute;
+    z-index: 3;
+    color: #ffffff;
+    left: 6.9vw;
+    top: 1vw;
+}
+
+.labirint{
+    width: 93vw;
+    height: 64vw;
+    position: absolute;
+    left: -5.5vw;
+}
+
+.start{
+    width: 8.4vw;
+    height: 8.1vw;
+    position: absolute;
+    top: 10vw;
+    left: 6.7vw;
+}
+
+.text_start{
+    position: absolute;
+    z-index: 5;
+    top: 12.7vw; 
+    left: 6.3vw;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    width: 10%;
+    font-size: 1.5vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+}
+
+.kletks1{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 11.5vw ;
+    left: 15vw;
+}
+
+.kletks2{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 17vw ;
+    left: 15vw;
+}
+
+.kletks3{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 22.5vw ;
+    left: 15vw;
+}
+
+.kletks4{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 28vw ;
+    left: 15vw;
+}
+
+.kletks5{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw ;
+    left: 15vw;
+}
+
+.kletks6{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw ;
+    left: 20.5vw;
+}
+
+.kletks7{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw ;
+    left: 26vw;
+}
+
+.kletks8{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw ;
+    left: 31.5vw;
+}
+
+.kletks9{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 28vw ;
+    left: 31.5vw;
+}
+
+.kletks10{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 22.5vw ;
+    left: 31.5vw;
+}
+
+.kletks11{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 17vw ;
+    left: 31.5vw;
+}
+
+.kletks12{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 17vw ;
+    left: 37vw;
+}
+
+.kletks13{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 17vw;
+    left: 42.5vw;
+}
+
+.kletks14{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 17vw;
+    left: 48vw;
+}
+
+.kletks15{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 22.5vw;
+    left: 48vw;
+}
+
+.kletks16{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 28vw;
+    left: 48vw;
+}
+
+.kletks17{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw;
+    left: 48vw;
+}
+
+.kletks18{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 39vw;
+    left: 48vw;
+}
+
+.kletks19{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 48vw;
+}
+
+.kletks20{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 42.5vw;
+}
+
+.kletks21{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 37vw;
+}
+
+.kletks22{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 31.5vw;
+}
+
+.kletks23{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 26vw;
+}
+
+.kletks24{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 20.5vw;
+}
+
+.kletks25{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 20.5vw;
+}
+
+.kletks26{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 20.5vw;
+}
+
+.kletks27{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 26vw;
+}
+
+.kletks28{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 31.5vw;
+}
+
+.kletks29{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 31.5vw;
+}
+
+.kletks30{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 37vw;
+}
+
+.kletks31{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 42.5vw;
+}
+
+.kletks32{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 48vw;
+}
+
+.kletks33{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 53.5vw;
+}
+
+.kletks34{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 59vw;
+}
+
+.kletks35{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 59vw;
+}
+
+.kletks36{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 59vw;
+}
+
+.kletks37{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 39vw;
+    left: 59vw;
+}
+
+.kletks38{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 64.5vw;
+}
+
+.kletks39{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 70vw;
+}
+
+.kletks40{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 70vw;
+}
+
+.kletks41{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 39vw;
+    left: 64.5vw;
+}
+
+.kletks42{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 39vw;
+    left: 70vw;
+}
+
+.kletks43{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 39vw;
+    left: 75.5vw;
+}
+
+.kletks44{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw;
+    left: 75.5vw;
+}
+
+.kletks45{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 28vw;
+    left: 75.5vw;
+}
+
+.kletks46{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 28vw;
+    left: 70vw;
+}
+
+.kletks47{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 28vw;
+    left: 64.5vw;
+}
+
+.kletks48{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 22.5vw;
+    left: 64.5vw;
+}
+
+.kletks49{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 17vw;
+    left: 64.5vw;
+}
+
+
+.kletks50{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 11.5vw;
+    left: 64.5vw;
+}
+
+
+.kletks51{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 11.5vw;
+    left: 70vw;
+}
+
+.kletks52{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 11.5vw;
+    left: 75.5vw;
+}
+
+.kletks53{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 11.5vw;
+    left: 81vw;
+}
+
+.kletks54{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 11.5vw;
+    left: 86.5vw;
+}
+
+.kletks55{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 17vw;
+    left: 86.5vw;
+}
+
+.kletks56{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 22.5vw;
+    left: 86.5vw;
+}
+
+.kletks57{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 28vw;
+    left: 86.5vw;
+}
+.kletks58{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw;
+    left: 86.5vw;
+}
+
+.kletks59{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 33.5vw;
+    left: 92vw;
+}
+
+.kletks60{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 39vw;
+    left: 92vw;
+}
+
+.kletks61{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 39vw;
+    left: 97.5vw;
+}
+
+.kletks62{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 44.5vw;
+    left: 97.5vw;
+}
+
+.kletks63{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 97.5vw;
+}
+
+.kletks64{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 92vw;
+}
+
+.kletks65{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 86.5vw;
+}
+
+.kletks66{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 50vw;
+    left: 81vw;
+}
+
+.kletks67{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 55.5vw;
+    left: 81vw;
+}
+
+
+.kletks68{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 61vw;
+    left: 81vw;
+}
+
+.finish{
+    width: 8.4vw;
+    height: 8.1vw;
+    position: absolute;
+    top: 59.5vw;
+    left: 86vw;
+}
+
+.text_finish{
+    position: absolute;
+    z-index: 5;
+    top: 62.2vw; 
+    left: 85.5vw;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    width: 10%;
+    font-size: 1.4vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+}
+
+.section6{ 
+    width: 100%;
+    height: 36.8vw;
+    overflow: hidden;
+    position: absolute;
+}
+
+.fon_podval{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}  
+
+.table1{
+    width: 16vw;
+    height: 29vw;
+    z-index: 2;
+    position: absolute;
+    top: 10vw;
+    left: 10vw;
+    animation-delay: 0s;
+    transform: translateY(100%); 
+    animation: UpDown_table 2.5s linear infinite;
+}
+
+.table2{
+    width: 19vw;
+    height: 31vw;
+    z-index: 2;
+    position: absolute;
+    top: 7vw;
+    left: 39vw;
+    animation-delay: 1.5s;
+    transform: translateY(100%); 
+    animation: UpDown_table 3s linear infinite;
+}
+
+.table3{
+    width: 16vw;
+    height: 29vw;
+    z-index: 2;
+    position: absolute;
+    top: 10vw;
+    left: 73vw;
+    animation-delay: 2.5s;
+    transform: translateY(100%); 
+    animation: UpDown_table 2.5s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
