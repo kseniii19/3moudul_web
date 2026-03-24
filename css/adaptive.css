@@ -1,0 +1,1892 @@
+
+
+@media screen and (min-width: 1px) and (max-width: 450px) /*  телефон */ {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #E494AE;
+}
+
+.section1{
+    width: 100%;
+    height: 210vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.FON{
+    width: 100%; 
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.fon_img{
+    width: 100%;      
+    height: 100%;
+}
+
+.letter1{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-15deg);
+    left: 3vw;
+    top: 10vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(15deg);
+     animation-delay: 0s;
+}
+
+.letter2{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-5deg);
+    left: 12vw;
+    top: -1.5vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-5deg);
+     animation-delay: 0.4s;
+}
+
+.letter3{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(15deg);
+    left: 24vw;
+    top: 8vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 1s;
+}
+
+.letter4{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-25deg);
+    left: 36vw;
+    top: 0vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-20deg);
+     animation-delay: 1.2s;
+}
+
+.letter5{
+    position: absolute; 
+    z-index: 3;    
+   font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(0deg);
+    left: 49vw;
+    top: 6vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(0deg);
+     animation-delay: 1.5s;
+}
+
+.letter6{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(15deg);
+    left: 63vw;
+    top: -1vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 0.3s;
+}
+
+.letter7{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-15deg);
+    left: 75vw;
+    top: 10vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-10deg);
+     animation-delay: 1s;
+}
+
+.letter8{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 13vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(20deg);
+    left: 89vw;
+    top: 3vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 0.7s;
+
+}
+
+.ZANAVES {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.shtora1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55vw;
+    height: 90%;
+}
+
+.shtora_img1 {
+    width: 100%;  
+    height: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+.shtora2 {
+    position: absolute;
+    left: 40vw;
+    top: 0;
+    width: 65vw;
+    height: 90%;
+}
+
+.shtora_img2 {
+    width: 100%;  
+    height: 100%; 
+    display: block;
+    object-fit: fill;
+}
+
+
+.button_flower{
+    position: absolute;
+    top: 120vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;  
+    height: 50vw; 
+    z-index: 4;
+}
+
+.main_button{
+    position: absolute; 
+    width: 50vw; 
+    height: 10vw;
+    z-index: 2;    
+    top: 50%;      
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.flower1 { 
+   display: none;
+}
+
+.flower2 { 
+    display: none;
+}
+
+.flower3 {
+     display: none;
+}
+
+.flower4 {
+   display: none;
+}
+
+.flower5 { 
+    display: none;
+} 
+
+.flower6 {
+    display: none;
+}
+
+.flower7 { 
+    display: none;
+}
+
+.flower8 { 
+    display: none;
+}
+
+.flower9 { 
+   display: none;
+}
+
+.flower10 { 
+   display: none;
+} 
+
+.flower11 {
+     display: none;
+}
+
+.flower12 { 
+   display: none;
+}
+
+.flower13 { 
+    display: none;
+}
+
+.flower14 { 
+   display: none;
+}
+
+.flower15 { 
+    display: none;
+}
+
+.flower16 { 
+    display: none;
+}
+
+.flower17 { 
+   display: none;
+}
+
+.flower18 { 
+   display: none;
+}
+
+.flower20 {
+   display: none;
+}
+
+.flower21 { 
+    display: none;
+}
+
+.flower_group{
+    width: 70vw;
+    height: 50vw;
+    position: absolute;
+    z-index: 5;
+}
+
+.flower_group {
+        width: 70vw;
+        height: 50vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 1;
+    }
+
+.button_text {
+    position: absolute;
+    top: 50%;     
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;   
+    font-family: 'Kommuna';
+    font-size: 6vw; 
+    color: white;
+    pointer-events: none;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+
+.section2 {
+    width: 100%;
+    height: 60vw;
+    overflow: hidden;
+    top: -10vw;
+    min-height: 105vw; 
+
+}
+
+.BIRKI {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    top: 0; 
+    height: 130vw;
+}
+
+.birka_img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    transform-style: preserve-3d;
+    transform-origin: top center; 
+    animation: birka_swing 6s ease-in-out infinite;
+}
+
+.birka_img img {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.birka_img1 { 
+    width: 60vw; 
+    height: 90vw; 
+    top: -15vw; 
+    left: -5vw; 
+    animation-duration: 6s; 
+    animation-delay: -1s;
+    position: absolute; 
+}
+
+.birka_img2 { 
+   display: none;
+}
+
+.birka_img3 { 
+     display: none;
+}
+
+.birka_img4 { 
+    display: none;
+}
+
+.birka_img5 { 
+   display: none;
+}
+
+.birka_img6 { 
+    display: none;
+}
+
+.birka_img7 { 
+    width: 80vw; 
+    height: 100vw; 
+    top: 2vw; 
+    left: 35vw; 
+    animation-duration: 4.5s; 
+    animation-delay: -1.5s; 
+    position: absolute;
+}
+
+.birka_text1 {
+    position: absolute;
+    z-index: 5;
+    top: 58%; 
+    left: 20%;
+    width: 60%;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.8vw;
+    text-align: left;
+    pointer-events: none;       
+    white-space: normal;   
+    word-wrap: break-word; 
+    line-height: 1.1;  
+}
+
+.birka_text1_1 {
+   position: absolute;
+    z-index: 5;
+    top: 75%; 
+    left: 20%;
+    width: 60%;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.7vw;
+    text-align: left;
+    pointer-events: none;       
+    white-space: normal;   
+    word-wrap: break-word; 
+    line-height: 1.1;  
+}
+
+
+.birka_text2 {
+    display: none;
+}
+
+.birka_text2_1 {
+   display: none;
+}
+
+.birka_text3 {
+   display: none;
+}
+
+.birka_text3_1 {
+    display: none;
+}
+
+.birka_text4 {
+   display: none;
+}
+
+
+.birka_text5 {
+    display: none;
+}
+
+.birka_text5_1 {
+   display: none;
+}
+
+.birka_text6 {
+    display: none;
+}
+
+.birka_text6_1 {
+    display: none;
+}
+
+.birka_text7 {
+    position: absolute;
+    z-index: 5;
+    top: 56%; 
+    left: 26%;
+    width: 45%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.8vw;
+    text-align: left;
+    pointer-events: none;
+    white-space: normal ;
+    line-height: 1.1; 
+}
+
+.birka_text7_1 {
+    position: absolute;
+    z-index: 5;
+    top: 76%; 
+    left: 26%;
+    width: 50%; 
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.7vw;
+    text-align: left;
+    pointer-events: none;
+    white-space: normal ;
+    line-height: 1.1; 
+}
+
+
+
+
+.section3 {
+    width: 100%;
+    height: 200vw; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.FON3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.fon3 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.text_section3{
+    font-size: 5vw;
+    font-family: 'Kommuna';
+    position: absolute;
+    z-index: 3;
+    color: #ffffff;
+    left: 10vw;
+    top: 12vw;
+}
+
+.box1{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 22vw;
+    left: 20vw;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+.box2{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 22vw;
+    left: 36vw;
+    -webkit-user-drag: none;
+}
+
+.box3{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 22vw;
+    left: 52vw;
+    -webkit-user-drag: none;
+}
+
+.box4{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 22vw;
+    left: 68vw;
+    -webkit-user-drag: none;
+}
+
+.box5{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 38vw;
+    left: 20vw;
+    -webkit-user-drag: none;
+}
+
+.box6{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 38vw;
+    left: 36vw;
+    -webkit-user-drag: none;
+}
+
+.box7{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 38vw;
+    left: 52vw;
+    -webkit-user-drag: none;
+}
+
+.box8{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 38vw;
+    left: 68vw;
+    -webkit-user-drag: none;
+}
+
+.box9{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 54vw;
+    left: 20vw;
+    -webkit-user-drag: none;
+}
+
+.box10{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 54vw;
+    left: 36vw;
+    -webkit-user-drag: none;
+}
+
+.box11{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 54vw;
+    left: 52vw;
+    -webkit-user-drag: none;
+}
+
+.box12{
+    width: 14vw;
+    height: 14vw;
+    z-index: 4;
+    position: absolute;
+    top: 54vw;
+    left: 68vw;
+    -webkit-user-drag: none;
+}
+
+.tsvetok1{
+    width: 12.5vw;
+    height: 12vw;
+    z-index: 7;
+    position: absolute;
+    top: 22vw;
+    left: 21vw;
+    transition: none;
+}
+
+.tsvetok2{
+    width: 12.5vw;
+    height: 12vw;
+    z-index: 7;
+    position: absolute;
+    top: 23vw;
+    left: 36.5vw;
+    transition: none;
+}
+
+.tsvetok3{
+    width: 12.5vw;
+    height: 12vw;
+    z-index: 7;
+    position: absolute;
+    top: 23vw;
+    left: 52.5vw;
+    transition: none;
+}
+
+.tsvetok4{
+    width: 13vw;
+    height: 13vw;
+    z-index: 7;
+    position: absolute;
+    top: 22vw;
+    left: 68.5vw;
+    transition: none;
+}
+
+.listva1{
+    width: 11vw;
+    height: 10vw;
+    z-index: 7;
+    position: absolute;
+    top: 39.5vw;
+    left: 21vw;
+    transition: none;
+}
+
+.listva2{
+    width: 11vw;
+    height: 10vw;
+    z-index: 7;
+    position: absolute;
+    top: 39vw;
+    left: 37vw;
+    transition: none;
+}
+
+.listva3{
+    width: 11vw;
+    height: 10vw;
+    z-index: 7;
+    position: absolute;
+    top: 40vw;
+    left: 53vw;
+    transition: none;
+}
+
+.listva4{
+    width: 14vw;
+    height: 13vw;
+    z-index: 7;
+    position: absolute;
+    top: 38vw;
+    left: 68vw;
+    transition: none;
+}
+
+.ukrash1{
+    width: 11vw;
+    height: 10vw;
+    z-index: 7;
+    position: absolute;
+    top: 56vw;
+    left: 21.5vw;
+    transition: none;
+}
+
+.ukrash2{
+    width: 11vw;
+    height: 10vw;
+    z-index: 7;
+    position: absolute;
+    top: 56vw;
+    left: 37.5vw;
+    transition: none;
+}
+
+.ukrash3{
+    width: 11vw;
+    height: 10vw;
+    z-index: 7;
+    position: absolute;
+    top: 56vw;
+    left: 53.5vw;
+    transition: none;
+}
+
+.ukrash4{
+    width: 11vw;
+    height: 10vw;
+    z-index: 7;
+    position: absolute;
+    top: 56vw;
+    left: 69.5vw;
+    -webkit-user-drag: none;
+    transition: none;
+}
+
+.primeroch{
+    width: 60vw;
+    height: 92vw;
+    position: absolute;
+    z-index: 4;
+    top: 74vw;
+    left: 21vw;
+    -webkit-user-drag: none;
+}
+
+.shtorka_primeroch{
+    width: 54vw;
+    height: 83vw;
+    position: absolute;
+    z-index: 4;
+    top: 76vw;
+    left: 10vw;
+    animation: shtorka_swing 3s ease-in-out infinite;
+    transform-origin: top center;
+    -webkit-user-drag: none;
+}
+
+.stebel{
+    width: 20vw;
+    height: 45vw;
+    position: absolute;
+    z-index: 5;
+    top: 114vw;
+    left: 44vw;
+    -webkit-user-drag: none;
+}
+
+
+.zone1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2vw;
+    pointer-events: none;
+    width: 30vw;
+    height: 30vw;
+    top: 97vw;    
+    left: 45vw;
+    border: none; 
+}
+
+.zone2{
+    width: 27vw;
+    height: 23vw;
+    position: absolute;
+    top: 120vw;
+    left: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2vw;
+    pointer-events: none;
+    transform: rotate(25deg);
+}
+
+.zone3{
+    width: 20vw;
+    height: 10vw;
+    position: absolute; 
+    top: 118vw;
+    left: 49vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2vw;
+    pointer-events: none;
+}
+
+.in-zone {
+    transform: scale(1.8) !important; 
+}
+
+[id^="tsvetok"].in-zone {
+    transform: scale(2) !important;
+    z-index: 10 !important; 
+}
+
+/* 2. УКРАШЕНИЯ - ПОД ЦВЕТКОМ (z-index 8) */
+[id^="ukrash"].in-zone {
+    transform: scale(1) !important; /* Твой масштаб */
+    z-index: 8 !important; 
+}
+
+
+.knopka3 {
+    width: 40vw;
+    height: 9vw;
+    top: 174vw; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.knopka3_img {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+}
+
+.knopka3_text {
+    display: block !important;
+    font-size: 4vw;
+}
+
+
+
+
+
+.section4{
+    width: 100%;
+    height: 120vw;
+    position: relative;
+    z-index: 2;
+}
+
+.butt1{
+   display: none;
+}
+
+.butt2{
+    display: none;
+}
+
+.butt3{
+   display: none;
+}
+
+.birka8 {
+   display: none;
+}
+
+.birka8 img {
+     display: none;
+}
+
+.birka_text8 {
+    display: none;
+}
+
+.fairy{
+    width: 30vw;
+    height: 37vw;
+    position: absolute;
+    left: 60vw;
+    top: 4vw;
+    z-index: 5;
+}
+
+.hand{
+    width: 7.6vw;
+    height: 7.7vw;
+    position: absolute;
+    left: 65vw;
+    top: 16vw;
+    z-index: 4;
+    animation: hand_move 2s ease-in-out infinite;
+    transform-origin: right center;
+}
+
+.fairy_tsvetok1{
+   display: none;
+}
+
+.fairy_tsvetok2{
+    width: 87vw;
+    height: 126vw;
+    position: absolute;
+    left: 32vw;
+    top: 13vw;
+    z-index: 1;
+    transform: rotate(3deg);
+    
+}
+
+.fairy_tsvetok3{
+     display: none;
+}
+
+
+.text_section4{
+    font-size: 5vw;
+    font-family: 'Kommuna';
+    position: absolute;
+    z-index: 3;
+    color: #ffffff;
+    left: 10vw;
+    top: 50vw;
+}
+
+.paletka{
+    width: 60vw;
+    height: 67vw;
+    position: absolute;
+    top: 52vw;
+    left: 10vw;
+}
+
+.memory {
+    position: absolute;
+    top: 73vw;   
+    left: 19vw;  
+    width: 42vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2.5vw;
+    z-index: 10; 
+    perspective: 1000px;
+}
+
+.memory_card {
+    width: 11vw;
+    height: 11vw;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto; /* Принудительно включаем клики */
+}
+
+.memory_card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card_back, .card_front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: block;
+    object-fit: contain;
+}
+
+.card_front {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+.section5{
+    width: 100%;
+    height: 140vw; 
+    position: relative;
+    overflow: hidden;
+} 
+
+.text_section5{
+    font-size: 5vw;
+    font-family: 'Kommuna';
+    position: absolute;
+    z-index: 3;
+    color: #ffffff;
+    left: 10vw;
+    top: 7vw;
+}
+
+.labirint{
+    width: 100%;
+    height: 140vw;
+    position: absolute;
+    left: -7vw;
+    top: 7vw;
+}
+
+.start{
+    width: 14vw;
+    height: 14vw;
+    position: absolute;
+    top: 10vw;
+    left: 65vw;
+}
+
+.text_start{
+    position: absolute;
+    z-index: 5;
+    top: 14vw; 
+    left: 67vw;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    width: 10%;
+    font-size: 3vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+}
+
+.kletks1{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 24vw;
+    left: 67.5vw;
+}
+
+.kletks2{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 24vw;
+    left: 57vw;
+}
+
+.kletks3{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 24vw;
+    left: 47vw;
+}
+
+.kletks4{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 24vw;
+    left: 36.5vw;
+}
+
+.kletks5{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 34vw ;
+    left: 36.5vw;
+}
+
+.kletks6{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 45vw ;
+    left: 36.5vw;
+}
+
+.kletks7{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 55vw ;
+    left: 36.5vw;
+}
+
+.kletks8{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 55vw ;
+    left: 46.7vw;
+}
+
+.kletks9{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 55vw ;
+    left: 57vw;
+}
+
+.kletks10{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 45vw;
+    left: 57vw;
+}
+
+.kletks11{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 45vw;
+    left: 67vw;
+}
+
+.kletks12{
+     width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 45vw;
+    left: 77vw;
+}
+
+.kletks13{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 55vw;
+    left: 77vw;
+}
+
+.kletks14{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 65vw;
+    left: 77vw;
+}
+
+.kletks15{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 75vw;
+    left: 77vw;
+}
+
+.kletks16{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 75vw;
+    left: 67vw;
+}
+
+.kletks17{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 75vw;
+    left: 57vw;
+}
+
+.kletks18{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 75vw;
+    left: 47vw;
+}
+
+.kletks19{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 75vw;
+    left: 37vw;
+}
+
+.kletks20{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 85vw;
+    left: 37vw;
+}
+
+.kletks21{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 95vw;
+    left: 37vw;
+}
+
+.kletks22{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 95vw;
+    left: 27vw;
+}
+
+.kletks23{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 105vw;
+    left: 27vw;
+}
+
+.kletks24{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 115vw;
+    left: 27vw;
+}
+
+.kletks25{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 115vw;
+    left: 37vw;
+}
+
+.kletks26{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 115vw;
+    left: 47vw;
+}
+
+.kletks27{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 115vw;
+    left: 57vw;
+}
+
+.kletks28{
+     width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 105vw;
+    left: 57vw;
+}
+
+.kletks29{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 105vw;
+    left: 67vw;
+}
+
+.kletks30{
+   display: none;
+}
+
+.kletks31{
+     display: none;
+}
+
+.kletks32{
+    display: none;
+}
+
+.kletks33{
+     display: none;
+}
+
+.kletks34{
+    display: none;
+}
+
+.kletks35{
+    display: none;
+}
+
+.kletks36{
+    display: none;
+}
+
+.kletks37{
+     display: none;
+}
+
+.kletks38{
+    display: none;
+}
+
+.kletks39{
+    display: none;
+}
+
+.kletks40{
+    display: none;
+}
+
+.kletks41{
+    display: none;
+}
+
+.kletks42{
+    display: none;
+}
+
+.kletks43{
+    display: none;
+}
+
+.kletks44{
+    display: none;
+}
+
+.kletks45{
+    display: none;
+}
+
+.kletks46{
+    display: none;
+}
+
+.kletks47{
+    display: none;
+}
+
+.kletks48{
+     display: none;
+}
+
+.kletks49{
+    display: none;
+}
+
+
+.kletks50{
+     display: none;
+}
+
+.kletks51{
+    display: none;
+}
+
+.kletks52{
+    display: none;
+}
+
+.kletks53{
+    display: none;
+}
+
+.kletks54{
+    display: none;
+}
+
+.kletks55{
+     display: none;
+}
+
+.kletks56{
+    display: none;
+}
+
+.kletks57{
+    display: none;
+}
+.kletks58{
+    display: none;
+}
+
+.kletks59{
+    display: none;
+}
+
+.kletks60{
+    display: none;
+}
+
+.kletks61{
+    display: none;
+}
+
+.kletks62{
+    display: none;
+}
+
+.kletks63{
+    display: none;
+}
+
+.kletks64{
+    display: none;
+}
+
+.kletks65{
+    display: none;
+}
+
+.kletks66{
+    display: none;
+}
+
+.kletks67{
+    display: none;
+}
+
+.kletks68{
+    display: none;
+}
+
+.finish{
+    width: 14vw;
+    height: 14vw;
+    position: absolute;
+    top: 102.5vw; 
+    left: 77vw;
+}
+
+.text_finish{
+    position: absolute;
+    z-index: 5;
+    top: 107vw; 
+    left: 79vw;
+    color: #B85172;
+    font-family: 'Helvetica', sans-serif;
+    width: 10%;
+    font-size: 2.6vw;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal; 
+}
+
+
+
+
+.section6{ 
+    width: 100%;
+    height: 200vw;
+    overflow: hidden;
+    position: absolute;
+}
+
+.fon_podval{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}  
+
+.table1 {
+    top: 30vw;
+    left: 90vw; 
+    animation: slideSide_tableRight 4s ease-in-out infinite;
+    animation-delay: 0s;
+    width: 56vw;
+    height: 69vw;
+}
+
+
+.table2 {
+    top: 75vw;
+    left: -46vw; 
+    animation: slideSide_tableLeft 4s ease-in-out infinite;
+    animation-delay: 1.5s;
+    width: 56vw;
+    height: 69vw;
+}
+
+.table3 {
+    top: 130vw; 
+    left: 90vw; 
+    animation: slideSide_tableRight 4s ease-in-out infinite;
+    animation-delay: 3s;
+    width: 56vw;
+    height: 69vw;
+}
+
+
+@keyframes slideSide_tableRight {
+    0% {transform: translateX(0) rotate(-20deg);}
+    40% {transform: translateX(-30vw) rotate(-55deg);}
+    60% {transform: translateX(-30vw) rotate(-55deg);}
+    100% {transform: translateX(0) rotate(-20deg);}
+}
+
+
+@keyframes slideSide_tableLeft {
+    0% {transform: translateX(0) rotate(20deg);}
+    40% {transform: translateX(30vw) rotate(55deg);}
+    60% {transform: translateX(30vw) rotate(55deg);}
+    100% {transform: translateX(0) rotate(20deg);}
+}
+
+}
+
+
+
+
+@media screen and (min-width: 451px) and (max-width: 1365px) {
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #E494AE;
+}
+
+.section1{
+    width: 100%;
+    height: 130vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.FON{
+    width: 100%; 
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.fon_img{
+    width: 100%;      
+    height: 100%;    
+    display: block;   
+    object-fit: cover;
+}
+
+.letter1{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-15deg);
+    left: 3vw;
+    top: 10vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(15deg);
+     animation-delay: 0s;
+}
+
+.letter2{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-5deg);
+    left: 12vw;
+    top: -1.5vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-5deg);
+     animation-delay: 0.4s;
+}
+
+.letter3{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(15deg);
+    left: 24vw;
+    top: 8vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 1s;
+}
+
+.letter4{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-25deg);
+    left: 36vw;
+    top: 0vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-20deg);
+     animation-delay: 1.2s;
+}
+
+.letter5{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(0deg);
+    left: 49vw;
+    top: 6vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(0deg);
+     animation-delay: 1.5s;
+}
+
+.letter6{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(15deg);
+    left: 63vw;
+    top: -1vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 0.3s;
+}
+
+.letter7{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(-15deg);
+    left: 75vw;
+    top: 10vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(-10deg);
+     animation-delay: 1s;
+}
+
+.letter8{
+    position: absolute; 
+    z-index: 3;    
+    font-family: 'Kommuna';
+    font-size: 12vw;
+    color: white;
+    line-height: normal;
+    transform: rotate(20deg);
+    left: 89vw;
+    top: 3vw;
+    animation: pulse_letter 1s infinite ease-in-out;
+    --rot: rotate(20deg);
+     animation-delay: 0.7s;
+
+}
+
+.ZANAVES {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.shtora1 {
+   position: absolute;
+    left: 0;
+    top: 0;
+    width: 55vw;
+    height: 90%;
+}
+
+.shtora_img1 {
+    width: 100%;  
+    height: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+.shtora2 {
+    position: absolute;
+    left: 40vw;
+    top: 0;
+    width: 65vw;
+    height: 90%;
+}
+
+.shtora_img2 {
+    width: 100%;  
+    height: 100%; 
+    display: block;
+    object-fit: fill;
+}
+
+.button_flower{
+    position: absolute;
+    left: 50%; 
+    top: 48vw; 
+    transform: translate(-50%, -50%);
+    width: 50vw; 
+    height: 30vw;
+    z-index: 5;
+}
+
+.main_button{
+    position: absolute; 
+    width: 40vw; 
+    height: 7vw;
+    z-index: 4;
+    top: 43vw;
+    left: 27.5vw;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.flower1 { 
+    display: none;
+}
+
+.flower2 { 
+     display: none;
+}
+
+.flower3 {
+      display: none;
+}
+
+.flower4 {
+     display: none;
+}
+
+.flower5 { 
+    display: none;
+} 
+
+.flower6 {
+      display: none;
+}
+
+.flower7 { 
+     display: none;
+}
+
+.flower8 { 
+     display: none;
+}
+
+.flower9 { 
+     display: none;
+}
+
+.flower10 { 
+     display: none;
+} 
+
+.flower11 {
+      display: none;
+}
+
+.flower12 { 
+    display: none;
+}
+
+.flower13 { 
+    display: none;
+}
+
+.flower14 { 
+     display: none;
+}
+
+.flower15 { 
+    display: none;
+}
+
+.flower16 { 
+    display: none;
+}
+
+.flower17 { 
+    display: none;
+}
+
+.flower18 { 
+    display: none;
+}
+
+.flower20 {
+    display: none;
+}
+
+.flower21 { 
+     display: none;
+}
+
+.flower22 { 
+     display: none;
+}
+
+.flower23 { 
+    display: none;
+}
+
+.flower_group{
+    opacity: 0;
+}
+
+.button_text{
+    font-family: 'Kommuna';
+    font-size: 4vw;
+    color: white;
+    position: absolute;
+    top: 40.5vw;
+    left: 17.2vw;
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+.flower_group {
+    width: 55vw;
+    height: 35vw;
+    position: absolute;
+    top: 26vw;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    }
+
+
+
+}
