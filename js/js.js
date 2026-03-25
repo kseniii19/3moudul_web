@@ -300,119 +300,204 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 // лабиринт
-   let labMatrix = [
-    [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0],
-    [1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0],
-    [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0],
-    [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0],
-    [1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0],
-    [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1],
-    [0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
-    [0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1],
-    [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
-];
+  document.addEventListener('DOMContentLoaded', function() {
 
-let labSizeX = 16;
-let labSizeY = 10;
+    // --- 1. ПЕРВАЯ КНОПКА (Параллакс и скролл) ---
+    document.addEventListener('mousemove', (e) => {
+        const flowers = document.querySelectorAll('.button_flower img[class^="flower"]');
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const mouseX = e.clientX - centerX;
+        const mouseY = e.clientY - centerY;
 
-let labCurrentX = 0;
-let labCurrentY = 0;
+        flowers.forEach((flower) => {
+            const tiltX = mouseX * 0.05;
+            const moveX = mouseX * 0.02;
+            const moveY = mouseY * 0.02;
+            flower.style.transform = `translate(${moveX}px, ${moveY}px) rotate(${tiltX}deg)`;
+        });
+    });
 
-// Координаты финиша (последняя единица в матрице)
-const finishX = 12; 
-const finishY = 9; 
+    const scrollBtn = document.querySelector('.button_flower');
+    const targetSection = document.getElementById('section2');
+    if (scrollBtn && targetSection) {
+        scrollBtn.addEventListener('click', () => {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
 
-// Функция проверки победы
-function checkLabWin() {
-    if (labCurrentX === finishX && labCurrentY === finishY) {
-        // Блокируем дальнейшее перемещение
-        document.removeEventListener('keydown', flowerKeyDown);
+    // --- 2. МЕМО ИГРА ---
+    const memoCards = document.querySelectorAll('.memory_card');
+    let hasFlippedCard = false, lockBoard = false;
+    let firstCard, secondCard, matchedPairs = 0;
 
-        // Показываем плашку
-        setTimeout(() => {
-            const labOverlay = document.getElementById('lab_overlay');
-            if (labOverlay) {
-                labOverlay.style.display = 'flex';
+    function flipCard() {
+        if (lockBoard || this === firstCard || this.classList.contains('flipped')) return;
+        this.classList.add('flipped');
+        if (!hasFlippedCard) {
+            hasFlippedCard = true;
+            firstCard = this;
+            return;
+        }
+        secondCard = this;
+        let isMatch = firstCard.dataset.type === secondCard.dataset.type;
+        if (isMatch) {
+            matchedPairs++;
+            if (matchedPairs === 3) {
+                setTimeout(() => document.getElementById('memo_overlay').style.display = 'flex', 600);
             }
-        }, 300);
-    }
-}
-
-// Обработчик клавиш
-function flowerKeyDown(e) {
-    let labItem = document.getElementById('lab-item');
-    if (!labItem) return;
-
-    let itemTop = parseFloat(getComputedStyle(labItem).top);
-    let itemLeft = parseFloat(getComputedStyle(labItem).left);
-    const oneVw = window.innerWidth / 100;
-    let kletkaSize = 5.5;
-
-    let moved = false; // Флаг для фиксации движения
-
-    // Стрелка вверх
-    if (e.key === "ArrowUp") {
-        e.preventDefault();
-        if (labCurrentY > 0 && labMatrix[labCurrentY - 1][labCurrentX] == 1) {
-            let newY = itemTop / oneVw - kletkaSize;
-            labItem.style.top = newY + "vw";
-            labCurrentY -= 1;
-            moved = true;
+            [hasFlippedCard, lockBoard] = [false, false];
+            [firstCard, secondCard] = [null, null];
+        } else {
+            lockBoard = true;
+            setTimeout(() => {
+                firstCard.classList.remove('flipped');
+                secondCard.classList.remove('flipped');
+                [hasFlippedCard, lockBoard] = [false, false];
+                [firstCard, secondCard] = [null, null];
+            }, 1000);
         }
     }
-    // Стрелка вниз
-    else if (e.key == "ArrowDown") {
-        e.preventDefault();
-        if (labCurrentY < labSizeY - 1 && labMatrix[labCurrentY + 1][labCurrentX] == 1) {
-            let newY = itemTop / oneVw + kletkaSize;
-            labItem.style.top = newY + "vw";
-            labCurrentY += 1;
-            moved = true;
-        }
+    memoCards.forEach(card => card.addEventListener('click', flipCard));
+    document.getElementById('memo_next_btn')?.addEventListener('click', () => {
+        document.getElementById('memo_overlay').style.display = 'none';
+    });
+
+    // --- 3. КОНСТРУКТОР ЦВЕТКА (Drag and Drop) ---
+    let isDragging = false, draggingItem = null;
+    let shiftXvw = 0, shiftYvw = 0, isSaveClicked = false;
+    const itemIds = ["tsvetok1", "tsvetok2", "tsvetok3", "tsvetok4", "listva1", "listva2", "listva3", "listva4", "ukrash1", "ukrash2", "ukrash3", "ukrash4"];
+    const relations = { "tsvetok": "zone1", "listva": "zone2", "ukrash": "zone3" };
+
+    function getCoords(e) {
+        return e.touches ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : { x: e.clientX, y: e.clientY };
     }
-    // Стрелка влево
-    else if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        if (labCurrentX > 0 && labMatrix[labCurrentY][labCurrentX - 1] == 1) {
-            let newX = itemLeft / oneVw - kletkaSize;
-            labItem.style.left = newX + "vw";
-            labCurrentX -= 1;
-            moved = true;
-        }
+
+    function onStart(e) {
+        const target = e.target.closest('[id]');
+        if (!target || !itemIds.includes(target.id)) return;
+        isDragging = true; draggingItem = target;
+        draggingItem.style.transition = "none";
+        const c = getCoords(e), r = draggingItem.getBoundingClientRect(), vw = window.innerWidth / 100;
+        shiftXvw = (c.x - r.left) / vw;
+        shiftYvw = (c.y - r.top) / vw;
+        draggingItem.style.zIndex = "1000";
     }
-    // Стрелка вправо
-    else if (e.key === "ArrowRight") {
-        e.preventDefault();
-        if (labCurrentX < labSizeX - 1 && labMatrix[labCurrentY][labCurrentX + 1] == 1) {
-            let newX = itemLeft / oneVw + kletkaSize;
-            labItem.style.left = newX + "vw";
-            labCurrentX += 1;
-            moved = true;
+
+    function onMove(e) {
+        if (!isDragging) return;
+        const c = getCoords(e), vw = window.innerWidth / 100;
+        const secR = document.querySelector('.section3').getBoundingClientRect();
+        draggingItem.style.left = ((c.x - secR.left) / vw - shiftXvw) + 'vw';
+        draggingItem.style.top = ((c.y - secR.top) / vw - shiftYvw) + 'vw';
+    }
+
+    function onEnd() {
+        if (!draggingItem) return;
+        draggingItem.style.transition = "all 0.3s ease";
+        const itemR = draggingItem.getBoundingClientRect();
+        let foundZone = null;
+        document.querySelectorAll('.zone1, .zone2, .zone3').forEach(z => {
+            const zR = z.getBoundingClientRect();
+            if (!(itemR.right < zR.left || itemR.left > zR.right || itemR.bottom < zR.top || itemR.top > zR.bottom)) foundZone = z;
+        });
+
+        const type = draggingItem.id.replace(/[0-9]/g, '');
+        if (foundZone && foundZone.classList.contains(relations[type])) {
+            draggingItem.classList.add('in-zone');
+            const layers = { "tsvetok": 9, "ukrash": 8, "listva": 5 };
+            draggingItem.style.zIndex = layers[type];
+            const vw = window.innerWidth / 100, secR = document.querySelector('.section3').getBoundingClientRect(), zR = foundZone.getBoundingClientRect();
+            draggingItem.style.left = ((zR.left - secR.left + zR.width/2)/vw - (itemR.width/2/vw)) + "vw";
+            draggingItem.style.top = ((zR.top - secR.top + zR.height/2)/vw - (itemR.height/2/vw)) + "vw";
+        } else {
+            draggingItem.classList.remove('in-zone');
+        }
+        isDragging = false; draggingItem = null;
+    }
+
+    document.addEventListener('mousedown', onStart);
+    document.addEventListener('touchstart', onStart, {passive: false});
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('touchmove', onMove, {passive: false});
+    document.addEventListener('mouseup', onEnd);
+    document.addEventListener('touchend', onEnd);
+
+    document.querySelector('.knopka3')?.addEventListener('click', () => {
+        isSaveClicked = true;
+        if (document.querySelectorAll('.in-zone').length >= 3) document.getElementById('overlay').style.display = 'flex';
+        else alert("Сначала собери цветок!");
+    });
+
+    // --- 4. ЛАБИРИНТ (Ноутбук + iPad) ---
+    const labMatrix = [
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0],
+        [1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0],
+        [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0],
+        [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0],
+        [1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1],
+        [0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+        [0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1],
+        [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+    ];
+
+    // Маршрут для iPad (каждый тап — один шаг в списке)
+    const mazePath = [
+        [0,0],[1,0],[2,0],[3,0],[4,0],[4,1],[4,2],[4,3],[3,3],[2,3],[1,3],[1,4],[1,5],[1,6],
+        [2,6],[3,6],[4,6],[5,6],[6,6],[6,5],[6,4],[6,3],[6,2],[6,1],[7,1],[8,1],[8,2],[8,3],
+        [8,4],[8,5],[8,6],[8,7],[8,8],[7,8],[6,8],[5,8],[5,9],[5,10],[5,11],[4,11],[3,11],
+        [3,10],[3,9],[2,9],[1,9],[0,9],[0,10],[0,11],[0,12],[0,13],[1,13],[2,13],[3,13],
+        [4,13],[4,14],[5,14],[5,15],[6,15],[7,15],[7,14],[7,13],[7,12],[8,12],[9,12]
+    ];
+
+    let labCurrentX = 0, labCurrentY = 0, currentStep = 0;
+    const startLeftVw = 15.5, startTopVw = 12, kSize = 5.5;
+
+    function updateLabUI() {
+        const item = document.getElementById('lab-item');
+        item.style.left = (startLeftVw + (labCurrentX * kSize)) + "vw";
+        item.style.top = (startTopVw + (labCurrentY * kSize)) + "vw";
+        if (labCurrentX === 12 && labCurrentY === 9) {
+            setTimeout(() => document.getElementById('lab_overlay').style.display = 'flex', 300);
         }
     }
 
-    // Если был сделан шаг, проверяем, не финиш ли это
-    if (moved) {
-        checkLabWin();
-    }
-}
+    // Управление КЛАВИАТУРОЙ
+    document.addEventListener('keydown', (e) => {
+        let nX = labCurrentX, nY = labCurrentY;
+        if (e.key === "ArrowUp") nY--;
+        else if (e.key === "ArrowDown") nY++;
+        else if (e.key === "ArrowLeft") nX--;
+        else if (e.key === "ArrowRight") nX++;
+        else return;
 
-// Инициализация событий
-document.addEventListener('DOMContentLoaded', () => {
-    // Слушатель клавиатуры
-    document.addEventListener('keydown', flowerKeyDown);
+        if (nY >= 0 && nY < 10 && nX >= 0 && nX < 16 && labMatrix[nY][nX] === 1) {
+            e.preventDefault();
+            labCurrentX = nX; labCurrentY = nY;
+            updateLabUI();
+        }
+    });
 
-    // Логика кнопки "Вперед" на плашке
+    // Управление ТАПАМИ (iPad)
+    document.querySelector('.section5').addEventListener('touchstart', (e) => {
+        if (e.target.id === 'lab_next_btn') return;
+        e.preventDefault();
+        if (currentStep < mazePath.length - 1) {
+            currentStep++;
+            labCurrentY = mazePath[currentStep][0];
+            labCurrentX = mazePath[currentStep][1];
+            updateLabUI();
+        }
+    }, {passive: false});
+
     const labNextBtn = document.getElementById('lab_next_btn');
     if (labNextBtn) {
         labNextBtn.addEventListener('click', () => {
-            const labOverlay = document.getElementById('lab_overlay');
-            if (labOverlay) {
-                labOverlay.style.display = 'none';
-            }
-            // Можно добавить плавный скролл к следующей секции
-            // window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            document.getElementById('lab_overlay').style.display = 'none';
         });
     }
+
+    updateLabUI(); // Инициализация позиции
 });

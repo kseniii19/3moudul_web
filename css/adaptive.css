@@ -1,5 +1,4 @@
 
-
 @media screen and (min-width: 1px) and (max-width: 450px) /*  телефон */ {
 
 * {
@@ -814,6 +813,74 @@ html, body{
 }
 
 
+.overlay {
+    display: none; 
+    position: fixed;
+    top: -50vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-card {
+    position: relative;
+    width: 65vw; 
+    height: 43vw;
+    background: #fdf0f3; 
+    border-radius: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 4.5vw; 
+    box-sizing: border-box;
+    box-shadow: 0 1vw 4vw rgba(0,0,0,0.2);
+}
+
+.modal-title {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 4vw;
+    margin: 0;
+    font-weight: 500;
+}
+
+.input-group {
+    width: 70%;
+}
+
+.modal-input {
+    width: 100%;
+    border: none;
+    border-bottom: 0.2vw solid #000; 
+    background: transparent;
+    font-size: 3.5vw;
+    text-align: center;
+    outline: none;
+    padding: 0.5vw 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+.submit-btn {
+    background: #e3c0c8; 
+    border: 0.2vw solid #fff;
+    border-radius: 5vw;
+    padding: 0.5vw 4.3vw;
+    font-size: 3vw;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 20vw;
+    height: 5vw;
+}
+
+
+
 .zone1{
     position: absolute;
     display: flex;
@@ -1032,282 +1099,144 @@ html, body{
 
 
 .section5{
-    width: 100%;
-    height: 140vw; 
-    position: relative;
-    overflow: hidden;
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
 } 
 
 .text_section5{
-    font-size: 5vw;
-    font-family: 'Kommuna';
-    position: absolute;
-    z-index: 3;
-    color: #ffffff;
-    left: 10vw;
-    top: 7vw;
+    display: none;
 }
 
 .labirint{
-    width: 100%;
-    height: 140vw;
-    position: absolute;
-    left: -7vw;
-    top: 7vw;
+   display: none;
 }
 
 .start{
-    width: 14vw;
-    height: 14vw;
-    position: absolute;
-    top: 10vw;
-    left: 65vw;
+   display: none;
 }
 
 .text_start{
-    position: absolute;
-    z-index: 5;
-    top: 14vw; 
-    left: 67vw;
-    color: #B85172;
-    font-family: 'Helvetica', sans-serif;
-    width: 10%;
-    font-size: 3vw;
-    text-align: center;
-    pointer-events: none;
-    white-space: normal; 
+  display: none;
 }
 
 .kletks1{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 24vw;
-    left: 67.5vw;
+    display: none;
 }
 
 .kletks2{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 24vw;
-    left: 57vw;
+   display: none;
 }
 
 .kletks3{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 24vw;
-    left: 47vw;
+   display: none;
 }
 
 .kletks4{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 24vw;
-    left: 36.5vw;
+    display: none;
 }
 
 .kletks5{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 34vw ;
-    left: 36.5vw;
+   display: none;
 }
 
 .kletks6{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 45vw ;
-    left: 36.5vw;
+   display: none;
 }
 
 .kletks7{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 55vw ;
-    left: 36.5vw;
+    display: none;
 }
 
 .kletks8{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 55vw ;
-    left: 46.7vw;
+   display: none;
 }
 
 .kletks9{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 55vw ;
-    left: 57vw;
+   display: none;
 }
 
 .kletks10{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 45vw;
-    left: 57vw;
+   display: none;
 }
 
 .kletks11{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 45vw;
-    left: 67vw;
+    display: none;
 }
 
 .kletks12{
-     width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 45vw;
-    left: 77vw;
+   display: none;
 }
 
 .kletks13{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 55vw;
-    left: 77vw;
+    display: none;
 }
 
 .kletks14{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 65vw;
-    left: 77vw;
+   display: none;
 }
 
 .kletks15{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 75vw;
-    left: 77vw;
+   display: none;
 }
 
 .kletks16{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 75vw;
-    left: 67vw;
+   display: none;
 }
 
 .kletks17{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 75vw;
-    left: 57vw;
+   display: none;
 }
 
 .kletks18{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 75vw;
-    left: 47vw;
+   display: none;
 }
 
 .kletks19{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 75vw;
-    left: 37vw;
+    display: none;
 }
 
 .kletks20{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 85vw;
-    left: 37vw;
+   display: none;
 }
 
 .kletks21{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 95vw;
-    left: 37vw;
+   display: none;
 }
 
 .kletks22{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 95vw;
-    left: 27vw;
+    display: none;
 }
 
 .kletks23{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 105vw;
-    left: 27vw;
+   display: none;
 }
 
 .kletks24{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 115vw;
-    left: 27vw;
+  display: none;
 }
 
 .kletks25{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 115vw;
-    left: 37vw;
+   display: none;
 }
 
 .kletks26{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 115vw;
-    left: 47vw;
+    display: none;
 }
 
 .kletks27{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 115vw;
-    left: 57vw;
+   display: none;
 }
 
 .kletks28{
-     width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 105vw;
-    left: 57vw;
+   display: none;
 }
 
 .kletks29{
-    width: 9vw;
-    height: 9vw;
-    position: absolute;
-    top: 105vw;
-    left: 67vw;
+  display: none;
 }
 
 .kletks30{
@@ -1467,35 +1396,21 @@ html, body{
 }
 
 .finish{
-    width: 14vw;
-    height: 14vw;
-    position: absolute;
-    top: 102.5vw; 
-    left: 77vw;
+   display: none;
 }
 
 .text_finish{
-    position: absolute;
-    z-index: 5;
-    top: 107vw; 
-    left: 79vw;
-    color: #B85172;
-    font-family: 'Helvetica', sans-serif;
-    width: 10%;
-    font-size: 2.6vw;
-    text-align: center;
-    pointer-events: none;
-    white-space: normal; 
+   display: none;
 }
-
 
 
 
 .section6{ 
     width: 100%;
-    height: 200vw;
+    height: 190vw;
     overflow: hidden;
-    position: absolute;
+    position: relative;
+    margin-top: 8vw;
 }
 
 .fon_podval{
@@ -1886,7 +1801,6 @@ html, body{
     z-index: 1;
     opacity: 1;
     }
-
 
 
 }

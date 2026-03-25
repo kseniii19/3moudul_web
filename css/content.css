@@ -1573,7 +1573,7 @@ html, body{
     position: absolute;
     top: 12vw ;
     left: 15.5vw;
-    z-index: 6;
+   z-index: 5;
 }
 
 .kletks1{
