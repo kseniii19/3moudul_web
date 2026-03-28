@@ -454,7 +454,6 @@ html, body{
     z-index: 1;
 }
 
-
 .birka_img1 { 
     width: 17vw; 
     height: 27vw; 
@@ -555,7 +554,7 @@ html, body{
 .birka_text2 {
     position: absolute;
     z-index: 5;
-    top: 76%; 
+    top: 75%; 
     left: 27%;
     color: #B85172;
     font-family: 'Helvetica', sans-serif;
@@ -583,29 +582,32 @@ html, body{
 .birka_text3 {
     position: absolute;
     z-index: 5;
-    top: 56%; 
-    left: 30%;
-    width: 20%; 
+    top: 55%; 
+    left: 20%;
+    width: 45%;
     color: #B85172;
     font-family: 'Helvetica', sans-serif;
-    font-size: 1.5vw;
-    text-align: center;
-    pointer-events: none;
-    white-space: nowrap; 
+    font-size: 0.9vw;
+    text-align: left;
+    pointer-events: none;       
+    white-space: normal;   
+    word-wrap: break-word; 
+    line-height: 1.1;  
 }
 
 .birka_text3_1 {
     position: absolute;
     z-index: 5;
-    top: 64%; 
-    left: 10.5%;
-    width: 80%; 
+    top: 77%; 
+    left: 20%;
+    width: 52%;
     color: #B85172;
     font-family: 'Helvetica', sans-serif;
     font-size: 0.9vw;
-    text-align: center;
-    pointer-events: none;
-    white-space: normal; 
+    text-align: left;
+    pointer-events: none;       
+    white-space: normal;   
+    word-wrap: break-word; 
     line-height: 1.1;  
 }
 
@@ -646,30 +648,33 @@ html, body{
 .birka_text5 {
     position: absolute;
     z-index: 5;
-    top: 60%; 
-    left: 6%;
-    width: 90%;
+    top: 55%; 
+    left: 20%;
+    width: 54%;
     color: #B85172;
     font-family: 'Helvetica', sans-serif;
-    font-size: 1.5vw;
-    text-align: center;
-    pointer-events: none;
-    white-space: nowrap;
+    font-size: 0.9vw;
+    text-align: left;
+    pointer-events: none;       
+    white-space: normal;   
+    word-wrap: break-word; 
+    line-height: 1.1;  
 }
 
 
 .birka_text5_1 {
     position: absolute;
     z-index: 5;
-    top: 68%; 
-    left: 11.5%;
-    width: 80%;
+    top: 77%; 
+    left: 20%;
+    width: 55%;
     color: #B85172;
     font-family: 'Helvetica', sans-serif;
     font-size: 0.9vw;
-    text-align: center;
-    pointer-events: none;
-    white-space: normal; 
+    text-align: left;
+    pointer-events: none;       
+    white-space: normal;   
+    word-wrap: break-word; 
     line-height: 1.1;  
 }
 
@@ -686,7 +691,6 @@ html, body{
     pointer-events: none;
 }
 
-
 .birka_text6_1 {
     position: absolute;
     z-index: 5;
@@ -702,14 +706,12 @@ html, body{
     line-height: 1.1; 
 }
 
-
-
 .birka_text7 {
     position: absolute;
     z-index: 5;
-    top: 55%; 
+    top: 54%; 
     left: 18%;
-    width: 65%; 
+    width: 60%; 
     color: #B85172;
     font-family: 'Helvetica', sans-serif;
     font-size: 0.9vw;
@@ -1131,9 +1133,9 @@ html, body{
     border-radius: 4vw;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Центрирует всё по вертикали */
+    justify-content: center; 
     align-items: center;
-    gap: 3vw; /* Расстояние между заголовоком, полем и кнопкой */
+    gap: 3vw;
     box-sizing: border-box;
     box-shadow: 0 1vw 4vw rgba(0,0,0,0.2);
 }
@@ -1448,7 +1450,7 @@ html, body{
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: auto; /* Принудительно включаем клики */
+    pointer-events: auto; 
 }
 
 .memory_card.flipped {
